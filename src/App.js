@@ -10,21 +10,20 @@ import Axios from "axios";
 //});
 
 function App() {
-  const [catFact, setCatfact] = useState("");
-   
-  const fetchCatFact = () => {
-    Axios.get("https://catfact.ninja/fact").then((res) => {
-      setCatfact(res.data.fact);
-    });
-  };
-  useEffect(() => {
-    fetchCatFact();
-  }, []);
+  const [name,setName]=useState(" ");
+  const [predictedAge,setPredictedAge]=useState(0);
 
+  const fetchData=()=>{
+    Axios.get(`https://api.agify.io/?name=${name}`)
+    .then((response)=>{
+      setPredictedAge(response.data.age);
+    });//Best Practice to use backticks,to declare a variable inside a string
+  }
   return (
     <div className="App">
-      <button onClick={fetchCatFact}>Generate Cat Fact</button>
-      <p>{catFact}</p>
+      <input placeholder="Ex. Akshay..." onChange={(event)=>{setName(event.target.value);}}/>
+      <button onClick={fetchData}>Predict Age</button>
+      <h1>Predicted Age : {predictedAge}</h1>
     </div>
   );
 }
