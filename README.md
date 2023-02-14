@@ -1,5 +1,9 @@
 # Fetching Data from API in React
- Undestanding <b>Axios Library</b> and the Process to fetch data from API in React.I <b>did not focus much  on CSS</b> in this part.
+ Understanding <b>Axios Library</b> and the Process to fetch data from API in React.I <b>did not focus much  on CSS</b> in this part.
+ 
+ <b>API's </b> used : <br>
+ https://catfact.ninja/fact <br>
+ `https://api.agify.io/?name=${name}`
  
  <br>
 Attaching some sample screen shots :
@@ -9,7 +13,7 @@ Attaching some sample screen shots :
 
 <br>
 
-<i>Predicting Age using API</i> <br>
+<i>Predicting Age from API</i> <br>
 ![image](https://user-images.githubusercontent.com/73344382/218719608-6bca6572-ff36-430d-be8d-b3d3cbecf5f9.png)
 
 <br>
